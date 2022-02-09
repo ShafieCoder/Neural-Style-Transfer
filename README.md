@@ -26,3 +26,27 @@ Next, we will be building the Neural Style Transfer (NST) algorithm in three ste
 * Second, we will build the style cost function <img src="https://render.githubusercontent.com/render/math?math=J_{style}(S,G)">
 * Finally, we'll put it all together to get <img src="https://render.githubusercontent.com/render/math?math=J(G)=\alpha J_{content}(C,G) + \beta J_{style}(S,G)">
 
+#### 3.1- Computing the Content Cost
+One goal we should aim for when performing NST is for the content in generated image G to match the content of image C. To do so, we'll need an understanding of shallow versus deep layers :
+ * The shallower layers of a ConvNet tend to detect lower-level features such as edges and simple textures.
+ * The deeper layers tend to detect higher-level features such as more complex textures and object classes.
+ 
+ **To choose a "middle" activation layer <img src="https://render.githubusercontent.com/render/math?math=a^{[l]}"> :**
+ 
+We need the "generated" image G to have similar content as the input image C. Suppose we have chosen some layer's activations to represent the content of an image.
+* In practice, we'll get the most visually pleasing results if we choose a layer in the middle of the network--neither too shallow nor too deep. This ensures that the network detects both higher-level and lower-level features.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
