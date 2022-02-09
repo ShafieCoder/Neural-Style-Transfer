@@ -27,6 +27,8 @@ Next, we will be building the Neural Style Transfer (NST) algorithm in three ste
 * Finally, we'll put it all together to get <img src="https://render.githubusercontent.com/render/math?math=J(G)=\alpha J_{content}(C,G) + \beta J_{style}(S,G)">
 
 #### 3.1- Computing the Content Cost
+
+#### 3.1.1- Make Generated Image G Match the Content of Image C 
 One goal we should aim for when performing NST is for the content in generated image G to match the content of image C. To do so, we'll need an understanding of shallow versus deep layers :
  * The shallower layers of a ConvNet tend to detect lower-level features such as edges and simple textures.
  * The deeper layers tend to detect higher-level features such as more complex textures and object classes.
@@ -40,6 +42,13 @@ We need the "generated" image G to have similar content as the input image C. Su
 **To forward propagate image "C:"**
 * Set the image C as the input to the pre-trained VGG network, and run forward propagation.
 * Let  <img src="https://render.githubusercontent.com/render/math?math=a^{(C)}"> be the hidden layer activations in the layer you had chosen. This will be an <img src="https://render.githubusercontent.com/render/math?math=n_H \times n_W \times n_C"> tensor.
+
+**To forward propagate image "G":**
+* Repeat this process with the image G: Set G as the input, and run forward progation.
+* Let  <img src="https://render.githubusercontent.com/render/math?math=a^{(G)}">  be the corresponding hidden layer activation.
+
+#### 3.1.2- Content Cost Function <img src="https://render.githubusercontent.com/render/math?math=J_{content}(C,G)">
+One goal we should aim for when performing NST is for the content in generated image G to match the content of image C. A method to achieve this is to calculate the content cost function, which will be defined as:
 
 
 
