@@ -24,7 +24,7 @@ We will be using the the epynomously named VGG network from the [original NST pa
 Next, we will be building the Neural Style Transfer (NST) algorithm in three steps:
 * First, we will build the content cost function <img src="https://render.githubusercontent.com/render/math?math=J_{content}(C,G)">
 * Second, we will build the style cost function <img src="https://render.githubusercontent.com/render/math?math=J_{style}(S,G)">
-* Finally, we'll put it all together to get <img src="https://render.githubusercontent.com/render/math?math=J(G)=\alpha J_{content}(C,G) + \beta J_{style}(S,G)">
+* Finally, we'll put it all together to get <img src="https://render.githubusercontent.com/render/math?math=J(G)=\alpha J_{content}(C,G)+\beta J_{style}(S,G)">
 
 #### 3.1- Computing the Content Cost
 
@@ -35,23 +35,29 @@ One goal we should aim for when performing NST is for the content in generated i
  
  **To choose a "middle" activation layer <img src="https://render.githubusercontent.com/render/math?math=a^{[l]}"> :**
  
-We need the "generated" image G to have similar content as the input image C. Suppose we have chosen some layer's activations to represent the content of an image.
+We need the "generated" image 
+<p>
+  <img src="https://render.githubusercontent.com/render/math?math=G">
+  </p>
+  to have similar content as the input image C. Suppose we have chosen some layer's activations to represent the content of an image.
 
 **Note:** In practice, we'll get the most visually pleasing results if we choose a layer in the middle of the network--neither too shallow nor too deep. This ensures that the network detects both higher-level and lower-level features.
 
 **To forward propagate image "C:"**
-* Set the image C as the input to the pre-trained VGG network, and run forward propagation.
+* Set the image <img src="https://render.githubusercontent.com/render/math?math=C"> as the input to the pre-trained VGG network, and run forward propagation.
 * Let  <img src="https://render.githubusercontent.com/render/math?math=a^{(C)}"> be the hidden layer activations in the layer you had chosen. This will be an <img src="https://render.githubusercontent.com/render/math?math=n_H \times n_W \times n_C"> tensor.
 
 **To forward propagate image "G":**
-* Repeat this process with the image G: Set G as the input, and run forward progation.
+* Repeat this process with the image <img src="https://render.githubusercontent.com/render/math?math=G">: Set <img src="https://render.githubusercontent.com/render/math?math=G"> as the input, and run forward progation.
 * Let  <img src="https://render.githubusercontent.com/render/math?math=a^{(G)}">  be the corresponding hidden layer activation.
 
 #### 3.1.2- Content Cost Function <img src="https://render.githubusercontent.com/render/math?math=J_{content}(C,G)">
-One goal we should aim for when performing NST is for the content in generated image G to match the content of image C. A method to achieve this is to calculate the content cost function, which will be defined as:
-
-
-
+One goal we should aim for when performing NST is for the content in generated image G to match the content of image <img src="https://render.githubusercontent.com/render/math?math=C">. A method to achieve this is to calculate the content cost function, which will be defined as:
+<p align="center">
+<img src="https://render.githubusercontent.com/render/math?math=	\begin{equation}
+			J_{content}(C,G) = \frac{1}{4\times 	n_H \times n_W \times n_C}\sum_{\text{all entries}}(a^{(C)}-a^{(G)})^2
+	\end{equation}">
+</p>
 
 
 
