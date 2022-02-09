@@ -34,7 +34,12 @@ One goal we should aim for when performing NST is for the content in generated i
  **To choose a "middle" activation layer <img src="https://render.githubusercontent.com/render/math?math=a^{[l]}"> :**
  
 We need the "generated" image G to have similar content as the input image C. Suppose we have chosen some layer's activations to represent the content of an image.
-* In practice, we'll get the most visually pleasing results if we choose a layer in the middle of the network--neither too shallow nor too deep. This ensures that the network detects both higher-level and lower-level features.
+
+**Note:** In practice, we'll get the most visually pleasing results if we choose a layer in the middle of the network--neither too shallow nor too deep. This ensures that the network detects both higher-level and lower-level features.
+
+**To forward propagate image "C:"**
+* Set the image C as the input to the pre-trained VGG network, and run forward propagation.
+* Let  <img src="https://render.githubusercontent.com/render/math?math=a^{(C)}"> be the hidden layer activations in the layer you had chosen. This will be an <img src="https://render.githubusercontent.com/render/math?math=n_H \times n_W \times n_C"> tensor.
 
 
 
