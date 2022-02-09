@@ -41,7 +41,7 @@ We need the "generated" image G to have similar content as the input image C. Su
 * Set the image C as the input to the pre-trained VGG network, and run forward propagation.
 * Let  <img src="https://render.githubusercontent.com/render/math?math=a^{(C)}"> be the hidden layer activations in the layer you had chosen. This will be an <img src="https://render.githubusercontent.com/render/math?math=n_H \times n_W \times n_C"> tensor.
 
-<img src="https://latex.codecogs.com/svg.image?x&space;&plus;&space;a&space;" title="J(G)=\alpha J_{content}(C,G) + \beta J_{style}(S,G)" />
+
 
 
 
