@@ -60,8 +60,10 @@ One goal we should aim for when performing NST is for the content in generated i
 * In order to compute the cost  <img src="https://render.githubusercontent.com/render/math?math=J_{content}(C,G)"> , it might also be convenient to unroll these 3D volumes into a 2D matrix, as shown below.
 * Technically this unrolling step isn't needed to compute  <img src="https://render.githubusercontent.com/render/math?math=J_{content}"> , but it will be good practice for when you do need to carry out a similar operation later for computing the style cost  <img src="https://render.githubusercontent.com/render/math?math=J_{style}"> .
 
-<img src="images/decoder.png" style="width:500px;height:500;">
-<caption><center> <u><b>Figure 4</u></b>: The U-Net Decoder up close <br> </center></caption>
+<p align="center">
+  <img width="700" src="https://github.com/ShafieCoder/Image-Segmentation-with-U-Net/blob/main/images/encoder.png" alt="U-Net Encoder">
+</p>
+
 
 
 
