@@ -24,7 +24,7 @@ We will be using the the epynomously named VGG network from the [original NST pa
 Next, we will be building the Neural Style Transfer (NST) algorithm in three steps:
 * First, we will build the content cost function <img src="https://render.githubusercontent.com/render/math?math=J_{content}(C,G)">
 * Second, we will build the style cost function <img src="https://render.githubusercontent.com/render/math?math=J_{style}(S,G)">
-* Finally, we'll put it all together to get <img src="https://render.githubusercontent.com/render/math?math=J(G)=\alpha J_{content}(C,G)+\! \beta J_{style}(S,G)">
+* Finally, we'll put it all together to get <img src="https://render.githubusercontent.com/render/math?math=J(G)=\alpha J_{content}(C,G) {+\!} \beta J_{style}(S,G)">
 
 #### 3.1- Computing the Content Cost
 
@@ -53,11 +53,9 @@ We need the "generated" image
 
 #### 3.1.2- Content Cost Function <img src="https://render.githubusercontent.com/render/math?math=J_{content}(C,G)">
 One goal we should aim for when performing NST is for the content in generated image G to match the content of image <img src="https://render.githubusercontent.com/render/math?math=C">. A method to achieve this is to calculate the content cost function, which will be defined as:
-<p align="center">
-<img src="https://render.githubusercontent.com/render/math?math=	\begin{equation}
-			J_{content}(C,G) = \frac{1}{4\times 	n_H \times n_W \times n_C}\sum_{\text{all entries}}(a^{(C)}-a^{(G)})^2
-	\end{equation}">
-</p>
+
+<img src="https://render.githubusercontent.com/render/math?math=J_{content}(C,G) = \frac{1}{4\times n_H \times n_W \times n_C}\sum_{\text{all entries}}(a^{(C)}-a^{(G)})^2">
+
 
 
 
