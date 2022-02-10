@@ -24,7 +24,7 @@ We will be using the the epynomously named VGG network from the [original NST pa
 Next, we will be building the Neural Style Transfer (NST) algorithm in three steps:
 * First, we will build the content cost function <img src="https://render.githubusercontent.com/render/math?math=J_{content}(C,G)">
 * Second, we will build the style cost function <img src="https://render.githubusercontent.com/render/math?math=J_{style}(S,G)">
-* Finally, we'll put it all together to get <img src="https://render.githubusercontent.com/render/math?math=J(G)=\alpha J_{content}(C,G) {+\!} \beta J_{style}(S,G)">
+* Finally, we'll put it all together to get <img src="https://render.githubusercontent.com/render/math?math=J(G)=\alpha J_{content}(C,G) + \beta J_{style}(S,G)">
 
 #### 3.1- Computing the Content Cost
 
@@ -62,7 +62,7 @@ One goal we should aim for when performing NST is for the content in generated i
 
 
 
-
+<img src="https://render.githubusercontent.com/render/math?math=%5Cbegin%7Bpmatrix%7Da%20%26%20b%5C%5C%20c%20%26%20d%5Cend%7Bpmatrix%7D">
 
 
 
