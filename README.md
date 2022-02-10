@@ -24,7 +24,7 @@ We will be using the the epynomously named VGG network from the [original NST pa
 Next, we will be building the Neural Style Transfer (NST) algorithm in three steps:
 * First, we will build the content cost function <img src="https://render.githubusercontent.com/render/math?math=J_{content}(C,G)">
 * Second, we will build the style cost function <img src="https://render.githubusercontent.com/render/math?math=J_{style}(S,G)">
-* Finally, we'll put it all together to get <img src="https://render.githubusercontent.com/render/math?math=J(G)=\alpha J_{content}(C,G) + \beta J_{style}(S,G)">
+* Finally, we'll put it all together to get <img src="https://render.githubusercontent.com/render/math?math=\alpha J_{content}(C,G) + \beta J_{style}(S,G) ">
 
 #### 3.1- Computing the Content Cost
 
@@ -57,12 +57,11 @@ One goal we should aim for when performing NST is for the content in generated i
 
 * Here,  <img src="https://render.githubusercontent.com/render/math?math=n_H,n_W"> and <img src="https://render.githubusercontent.com/render/math?math=n_C">  are the height, width and number of channels of the hidden layer we have chosen, and appear in a normalization term in the cost.
 * For clarity, note that  <img src="https://render.githubusercontent.com/render/math?math=a^{(C)}">   and  <img src="https://render.githubusercontent.com/render/math?math=a^{(G)}">   are the 3D volumes corresponding to a hidden layer's activations.
-* In order to compute the cost  <img src="https://render.githubusercontent.com/render/math?math=J_{content}(C,G)}"> , it might also be convenient to unroll these 3D volumes into a 2D matrix, as shown below.
-* Technically this unrolling step isn't needed to compute  <img src="https://render.githubusercontent.com/render/math?math=J_{content}"> , but it will be good practice for when you do need to carry out a similar operation later for computing the style cost  <img src="https://render.githubusercontent.com/render/math?math=J_{style}}"> .
+* In order to compute the cost  <img src="https://render.githubusercontent.com/render/math?math=J_{content}(C,G)"> , it might also be convenient to unroll these 3D volumes into a 2D matrix, as shown below.
+* Technically this unrolling step isn't needed to compute  <img src="https://render.githubusercontent.com/render/math?math=J_{content}"> , but it will be good practice for when you do need to carry out a similar operation later for computing the style cost  <img src="https://render.githubusercontent.com/render/math?math=J_{style}"> .
 
-
-
-<img src="https://render.githubusercontent.com/render/math?math=%5Cbegin%7Bpmatrix%7Da%20%26%20b%5C%5C%20c%20%26%20d%5Cend%7Bpmatrix%7D">
+<img src="images/decoder.png" style="width:500px;height:500;">
+<caption><center> <u><b>Figure 4</u></b>: The U-Net Decoder up close <br> </center></caption>
 
 
 
