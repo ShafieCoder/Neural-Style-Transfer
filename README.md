@@ -35,10 +35,8 @@ One goal we should aim for when performing NST is for the content in generated i
  
  **To choose a "middle" activation layer <img src="https://render.githubusercontent.com/render/math?math=a^{[l]}"> :**
  
-We need the "generated" image 
-<p>
-  <img src="https://render.githubusercontent.com/render/math?math=G">
-  </p>
+We need the "generated" image <img src="https://render.githubusercontent.com/render/math?math=G">
+  
   to have similar content as the input image C. Suppose we have chosen some layer's activations to represent the content of an image.
 
 **Note:** In practice, we'll get the most visually pleasing results if we choose a layer in the middle of the network--neither too shallow nor too deep. This ensures that the network detects both higher-level and lower-level features.
@@ -53,9 +51,14 @@ We need the "generated" image
 
 #### 3.1.2- Content Cost Function <img src="https://render.githubusercontent.com/render/math?math=J_{content}(C,G)">
 One goal we should aim for when performing NST is for the content in generated image G to match the content of image <img src="https://render.githubusercontent.com/render/math?math=C">. A method to achieve this is to calculate the content cost function, which will be defined as:
-
+<p align = "center">
 <img src="https://render.githubusercontent.com/render/math?math=J_{content}(C,G) = \frac{1}{4\times n_H \times n_W \times n_C}\sum_{\text{all entries}}(a^{(C)}-a^{(G)})^2">
+</p>
 
+* Here,  <img src="https://render.githubusercontent.com/render/math?math=n_H,n_W"> and <img src="https://render.githubusercontent.com/render/math?math=n_C">  are the height, width and number of channels of the hidden layer we have chosen, and appear in a normalization term in the cost.
+* For clarity, note that  <img src="https://render.githubusercontent.com/render/math?math=a^{(C)}">   and  <img src="https://render.githubusercontent.com/render/math?math=a^{(G)}">   are the 3D volumes corresponding to a hidden layer's activations.
+* In order to compute the cost  <img src="https://render.githubusercontent.com/render/math?math=J_{content}(C,G)}"> , it might also be convenient to unroll these 3D volumes into a 2D matrix, as shown below.
+* Technically this unrolling step isn't needed to compute  <img src="https://render.githubusercontent.com/render/math?math=J_{content}"> , but it will be good practice for when you do need to carry out a similar operation later for computing the style cost  <img src="https://render.githubusercontent.com/render/math?math=J_{style}}"> .
 
 
 
