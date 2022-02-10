@@ -61,7 +61,7 @@ One goal we should aim for when performing NST is for the content in generated i
 * Technically this unrolling step isn't needed to compute  <img src="https://render.githubusercontent.com/render/math?math=J_{content}"> , but it will be good practice for when you do need to carry out a similar operation later for computing the style cost  <img src="https://render.githubusercontent.com/render/math?math=J_{style}"> .
 
 <p align="center">
-  <img width="700" src="https://github.com/ShafieCoder/Image-Segmentation-with-U-Net/blob/main/images/encoder.png" alt="U-Net Encoder">
+  <img width="700" src="https://github.com/ShafieCoder/Neural-Style-Transfer/blob/main/images/NST_LOSS.png" alt="unrolled version">
 </p>
 
 
