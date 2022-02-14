@@ -67,6 +67,16 @@ One goal we should aim for when performing NST is for the content in generated i
 #### 3.2- Computing the Style Cost
 Let's see how you can now define a "style" cost function <img src="https://render.githubusercontent.com/render/math?math=J_{style}(S,G)">!
 
+#### 3.2.1- Style Matrix
+**Gram matrix**
+* The style matrix is also called a "Gram matrix."
+* In linear algebra, the Gram matrix <img src="https://render.githubusercontent.com/render/math?math=G"> of a set of vectors <img src="https://render.githubusercontent.com/render/math?math=(\nu_1, \dots, \nu_n)"> is the matrix of dot products, whose entries are  
+<img src="https://render.githubusercontent.com/render/math?math=G_{ij}= \nu_{i}^{T}\nu_{j} = np.dot(\nu_{i},\nu_{j})">.
+
+* In other words,  <img src="https://render.githubusercontent.com/render/math?math=G_{ij}">  compares how similar  <img src="https://render.githubusercontent.com/render/math?math=\nu_{i}">  is to  <img src="https://render.githubusercontent.com/render/math?math=\nu_{j}"> : If they are highly similar, you would expect them to have a large dot product, and thus for  <img src="https://render.githubusercontent.com/render/math?math=G_{ij}">  to be large.
+
+**Compute Gram matrix <img src="https://render.githubusercontent.com/render/math?math=G_{gram}">**
+
 
 
 
