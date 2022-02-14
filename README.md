@@ -76,6 +76,11 @@ Let's see how you can now define a "style" cost function <img src="https://rende
 * In other words,  <img src="https://render.githubusercontent.com/render/math?math=G_{ij}">  compares how similar  <img src="https://render.githubusercontent.com/render/math?math=\nu_{i}">  is to  <img src="https://render.githubusercontent.com/render/math?math=\nu_{j}"> : If they are highly similar, you would expect them to have a large dot product, and thus for  <img src="https://render.githubusercontent.com/render/math?math=G_{ij}">  to be large.
 
 **Compute Gram matrix <img src="https://render.githubusercontent.com/render/math?math=G_{gram}">**
+We will compute the Style matrix by multiplying the "unrolled" filter matrix with its transpose:
+
+<p align="center">
+  <img width="700" src="https://github.com/ShafieCoder/Neural-Style-Transfer/blob/main/images/NST_LOSS.png" alt="unrolled version">
+</p>
 
 
 
