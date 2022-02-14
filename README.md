@@ -64,6 +64,9 @@ One goal we should aim for when performing NST is for the content in generated i
   <img width="700" src="https://github.com/ShafieCoder/Neural-Style-Transfer/blob/main/images/NST_LOSS.png" alt="unrolled version">
 </p>
 
+#### 3.2- Computing the Style Cost
+Let's see how you can now define a "style" cost function <img src="https://render.githubusercontent.com/render/math?math=J_{style}(S,G)">!
+
 
 
 
