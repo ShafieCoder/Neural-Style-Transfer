@@ -91,7 +91,15 @@ The result is a matrix of dimension <img src="https://render.githubusercontent.c
 
 <img src="https://render.githubusercontent.com/render/math?math=G_{(gram)ij}">: **prevalence of patterns or textures**
 
-* The diagonal elements  <img src="https://render.githubusercontent.com/render/math?math=G_{(gram)ii}"> measure how "active" a filter  <img src="https://render.githubusercontent.com/render/math?math=i}">  is.
+* The diagonal elements  <img src="https://render.githubusercontent.com/render/math?math=G_{(gram)ii}"> measure how "active" a filter  <img src="https://render.githubusercontent.com/render/math?math=i">  is.
+* For example support filter <img src="https://render.githubusercontent.com/render/math?math=i"> is detecting vertical textures in the image. Then <img src="https://render.githubusercontent.com/render/math?math=G_{(gram)ii}"> measures how common vertical textures are in the image as a whole.
+* If <img src="https://render.githubusercontent.com/render/math?math=G_{(gram)ii}"> is large, this means that the image has a lot of vertical texture.
+
+By capturing the prevalence of different types of features (<img src="https://render.githubusercontent.com/render/math?math=G_{(gram)ii}">), as well as how much different features occur together (<img src="https://render.githubusercontent.com/render/math?math=G_{(gram)ij}">), the style matrix <img src="https://render.githubusercontent.com/render/math?math=G_{gram}"> measures the style of an image.
+
+#### 3.2.2- Style Cost
+
+
 
 
 
