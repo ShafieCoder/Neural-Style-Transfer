@@ -85,7 +85,10 @@ We will compute the Style matrix by multiplying the "unrolled" filter matrix wit
 <img src="https://render.githubusercontent.com/render/math?math=G_{gram}= A_{unrolled}A_{unrolled}^{T}">
 
 **<img src="https://render.githubusercontent.com/render/math?math=G_{(gram)ij}">: correlation**
+
 The result is a matrix of dimension <img src="https://render.githubusercontent.com/render/math?math=(n_{C},n_{C})"> where  <img src="https://render.githubusercontent.com/render/math?math=n_{C}"> is the number of filters (channels). The value <img src="https://render.githubusercontent.com/render/math?math=G_{(gram)ij}"> measures how similar the activations of filter <img src="https://render.githubusercontent.com/render/math?math=i"> are to the activations of filter <img src="https://render.githubusercontent.com/render/math?math=j">.
+
+
 
 
 
