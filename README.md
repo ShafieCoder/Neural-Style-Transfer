@@ -116,6 +116,19 @@ Finally, we will create a cost function that minimizes both the style and the co
 <p align = "center">
 <img src="https://render.githubusercontent.com/render/math?math=J(G)=\alpha J_{content}(C,G)\dotplus \beta J_{style}(S,G)">
  </p>
+ 
+ ## 4- Solving the Optimization Problem
+ Finally, we get to put everything together to implement Neural Style Transfer!
+ Here's what our program be able to do:
+ 
+ 1. Load the content image
+2. Load the style image
+3. Randomly initialize the image to be generated
+4. Load the VGG19 model
+5. Compute the content cost
+6. Compute the style cost
+7. Compute the total cost
+8. Define the optimizer and learning rate
 
 
 
