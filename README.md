@@ -105,8 +105,17 @@ Our next goal will be to minimize the distance between the Gram matrix of the "s
 <p align = "center">
 <img src="https://render.githubusercontent.com/render/math?math=J_{style}^{[l]}(S,G) = \frac{1}{4\times n_{C}^{2} (n_H \times n_W)^{2}}\sum_{i=1}^{n_{C}}\sum_{j=1}^{n_C}(G^{(S)}_{(gram)i,j}-G^{(G)}_{(gram)i,j})^2">
 </p>
+* <img src="https://render.githubusercontent.com/render/math?math=G^{(S)}_{gram}"> Gram matrix of the "style" image.
+* <img src="https://render.githubusercontent.com/render/math?math=G_{gram}^{(G)}"> Gram matrix of the "generated" image.
+* Make sure you remember that this cost is computed using the hidden layer activations for a particular hidden layer in the network <img src="https://render.githubusercontent.com/render/math?math=a^{[l]}">.
 
+####3.3 - Defining the Total Cost to Optimize
 
+Finally, we will create a cost function that minimizes both the style and the content cost. The formula is:
+
+<p align = "center">
+<img src="https://render.githubusercontent.com/render/math?math=J(G)=\alpha J_{content}(C,G)\dotplus \beta J_{style}(S,G)">
+ </p>
 
 
 
