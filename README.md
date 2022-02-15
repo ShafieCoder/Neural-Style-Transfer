@@ -89,6 +89,11 @@ We will compute the Style matrix by multiplying the "unrolled" filter matrix wit
 The result is a matrix of dimension <img src="https://render.githubusercontent.com/render/math?math=(n_{C},n_{C})"> where  <img src="https://render.githubusercontent.com/render/math?math=n_{C}"> is the number of filters (channels). The value <img src="https://render.githubusercontent.com/render/math?math=G_{(gram)ij}"> measures how similar the activations of filter <img src="https://render.githubusercontent.com/render/math?math=i"> are to the activations of filter <img src="https://render.githubusercontent.com/render/math?math=j">.
 
 
+<img src="https://render.githubusercontent.com/render/math?math=G_{(gram)ij}">: **prevalence of patterns or textures**
+
+* The diagonal elements  <img src="https://render.githubusercontent.com/render/math?math=G_{(gram)ii}"> measure how "active" a filter  <img src="https://render.githubusercontent.com/render/math?math=i}">  is.
+
+
 
 
 
