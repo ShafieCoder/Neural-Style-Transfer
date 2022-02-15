@@ -98,6 +98,10 @@ The result is a matrix of dimension <img src="https://render.githubusercontent.c
 By capturing the prevalence of different types of features (<img src="https://render.githubusercontent.com/render/math?math=G_{(gram)ii}">), as well as how much different features occur together (<img src="https://render.githubusercontent.com/render/math?math=G_{(gram)ij}">), the style matrix <img src="https://render.githubusercontent.com/render/math?math=G_{gram}"> measures the style of an image.
 
 #### 3.2.2- Style Cost
+Our next goal will be to minimize the distance between the Gram matrix of the "style" image <img src="https://render.githubusercontent.com/render/math?math=S"> and the Gram matrix of the "generated" image <img src="https://render.githubusercontent.com/render/math?math=G">.
+* For now, we will use only a single hidden layer <img src="https://render.githubusercontent.com/render/math?math=a^{[l]}">.
+* The corresponding style cost for this layer is defined as:
+
 
 
 
